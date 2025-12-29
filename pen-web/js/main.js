@@ -1,17 +1,39 @@
 const buttons = document.querySelectorAll('.tab-button');
 const categories = document.querySelectorAll('.product-category');
+const showMoreBtn = document.getElementById('show-more');
 
+let visibleCount = 10;
+
+// Initialize first category
+let activeCategory = document.querySelector('.tab-button.active').dataset.category;
+updateVisibleProducts(activeCategory);
+
+// Function to show first 5 products
+function updateVisibleProducts(categoryId) {
+  const products = document.querySelectorAll(`#${categoryId} .product`);
+  products.forEach((prod, index) => {
+    prod.style.display = index < visibleCount ? 'block' : 'none';
+  });
+  showMoreBtn.style.display = products.length > visibleCount ? 'block' : 'none';
+}
+
+// Tab switching
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    // Remove active class from all buttons
     buttons.forEach(btn => btn.classList.remove('active'));
-    // Hide all categories
+    button.classList.add('active');
+
     categories.forEach(cat => (cat.style.display = 'none'));
 
-    // Activate clicked button
-    button.classList.add('active');
-    // Show corresponding category
-    const category = button.getAttribute('data-category');
-    document.getElementById(category).style.display = 'flex';
+    activeCategory = button.dataset.category;
+    document.getElementById(activeCategory).style.display = 'grid';
+    visibleCount = 10;
+    updateVisibleProducts(activeCategory);
   });
+});
+
+// Show More button
+showMoreBtn.addEventListener('click', () => {
+  visibleCount += 5;
+  updateVisibleProducts(activeCategory);
 });
