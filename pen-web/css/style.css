@@ -17,6 +17,49 @@ nav a {
     text-decoration: none;
 }
 
+/* This part is for the main section and it's products*/
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.tab-button {
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  cursor: pointer;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+.tab-button.active {
+  background-color: #333;
+  color: white;
+}
+
+.product-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 10px 0px 10px 10px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 1em;
+  width: 250px;
+  height: 450px;
+  text-align: center;
+}
+
+.product img {
+    border: 1px solid #ccc;
+    width: 230px;
+    height: 300px;
+    object-fit: contain;
+}
+
 footer {
     background-color: black;
     color: white;
