@@ -32,6 +32,15 @@ main {
   gap: 10px;
 }
 
+.window-button {
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 26px;
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: white;
+  cursor: pointer;
+}
+
 /* This part is for the main section and it's products*/
 .tabs {
   display: flex;

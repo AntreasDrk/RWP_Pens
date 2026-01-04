@@ -1,21 +1,22 @@
 const buttons = document.querySelectorAll('.tab-button');
 const categories = document.querySelectorAll('.product-category');
 const showMoreBtn = document.getElementById('show-more');
+const mainWindowBtn = document.querySelectorAll('.window-button');
 
 let visibleCount = 10;
 
 // Initialize first category
-let activeCategory = document.querySelector('.tab-button.active').dataset.category;
-updateVisibleProducts(activeCategory);
+// let activeCategory = document.querySelector('.tab-button.active').dataset.category;
+// updateVisibleProducts(activeCategory);
 
 // Function to show first 5 products
-function updateVisibleProducts(categoryId) {
-  const products = document.querySelectorAll(`#${categoryId} .product`);
-  products.forEach((prod, index) => {
-    prod.style.display = index < visibleCount ? 'block' : 'none';
-  });
-  showMoreBtn.style.display = products.length > visibleCount ? 'block' : 'none';
-}
+// function updateVisibleProducts(categoryId) {
+//   const products = document.querySelectorAll(`#${categoryId} .product`);
+//   products.forEach((prod, index) => {
+//     prod.style.display = index < visibleCount ? 'block' : 'none';
+//   });
+//   showMoreBtn.style.display = products.length > visibleCount ? 'block' : 'none';
+// }
 
 
 // main window
