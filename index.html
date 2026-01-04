@@ -19,114 +19,29 @@
     <main>
         <section id="product-categories">
             <div class="main-windows">
-                <button class="window-button" data-category="pens">Pens</button>
-                <button class="window-button" data-category="cutlery">Cutlery</button>
-                <button class="window-button" data-category="furniture">Furniture</button>
+                <button class="window-button active" data-tab="pens">Pens</button>
+                <button class="window-button" data-tab="cutlery">Cutlery</button>
+                <button class="window-button" data-tab="furniture">Furniture</button>
             </div>
-            <!--Sub - Category buttons-->
-             <div class="tabs">
-                 <button class="tab-button active" data-category="wooden">Wooden Pens</button>
-                 <button class="tab-button" data-category="plastic">Plastic Pens</button>
-             </div>
 
-            <!-- Products container-->
-            <div class="products">
+            <!-- PENS-->
+            <div class="windows-content active" id="pen">
+                <!--Sub - Category buttons-->
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="wooden">Wooden Pens</button>
+                    <button class="tab-button" data-tab="plastic">Plastic Pens</button>
+                </div>
                 <!-- Wooden Pens-->
-                <div class="product-category" id="wooden">
+                <div class="product-category active" id="wooden">
                     <div class="product">
                         <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
                         <h2>Wooden Pen 1</h2>
                         <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_1.JPG" alt="Wooden Pen 1">
-                        <h2>Wooden Pen 1</h2>
-                        <p>High-quality wooden pen.</p>
-                    </div>
-                    <div class="product">
-                        <img src="images/Wooden Pens/wooden_pen_2.jpg" alt="Wooden Pen 2">
-                        <h2>Wooden Pen 2</h2>
-                        <p>Elegant wooden pen.</p>
                     </div>
                 </div>
 
                 <!-- Plastic Pens-->
-                <div class="product-category" id="plastic" style="display:none;">
+                <div class="product-category active" id="plastic">
                     <div class="product">
                         <img src="images/plastic1.jpg" alt="Plastic Pen 1">
                         <h2>Plastic Pen 1</h2>
@@ -138,10 +53,16 @@
                         <p>Affordable plastic pen.</p>
                     </div>
                 </div>
+
+                <!-- button to show more -->
+                <button id="show-more" class="active-show-btn">Show More</button>
             </div>
             
-            <!-- button to show more -->
-            <button id="show-more">Show More</button>
+            <!-- CUTLERY -->
+             <div class="windows-content" id="cutlery"></div>
+
+             <!-- FURNITURE -->
+             <div class="windows-content" id="furniture"></div>
         </section>
     </main>
 
@@ -149,6 +70,6 @@
         <p>&copy; 2026 Soon title...</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/"></script>
 </body>
 </html>
