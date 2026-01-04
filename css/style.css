@@ -24,6 +24,14 @@ main {
     flex: 1;
 }
 
+/* main windows */
+.main-windows {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0 1em 0;
+  gap: 10px;
+}
+
 /* This part is for the main section and it's products*/
 .tabs {
   display: flex;

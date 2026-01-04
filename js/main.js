@@ -17,7 +17,11 @@ function updateVisibleProducts(categoryId) {
   showMoreBtn.style.display = products.length > visibleCount ? 'block' : 'none';
 }
 
-// Tab switching
+
+// main window
+
+
+// Tab switching for sub-windows
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     buttons.forEach(btn => btn.classList.remove('active'));
